@@ -1,0 +1,119 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">EDIT SCHOOL</h1>
+    <div class="col-6 offset-3">
+        <form action="/schools/<%=school._id%>?_method=PUT" method="POST" novalidate class="validated-form"
+            enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="schoolName">SCHOOL NAME</label>
+                <input class="form-control" type="text" id="schoolName" name="school[schoolName]"
+                    value="<%=school.schoolName %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="year">YEAR OF ESTABLISHMENT</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="year" placeholder="1991" aria-label="year"
+                        aria-describedby="fees-label" name="school[year]" value="<%=school.year %>"
+                        required>\<div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="principle">PRINCIPLE</label>
+                <input class="form-control" type="text" id="principle" name="school[principle]"
+                    value="<%=school.principle %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="curriculum">CURRICULUM FOLLOWED</label>
+                <input class="form-control" type="text" id="curriculum" name="school[curriculum]"
+                    value="<%=school.curriculum %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="admission">ADMISSION PERIOD</label>
+                <input class="form-control" type="text" id="admission" name="school[admission]"
+                    value="<%=school.admission %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="fees">REGISTRATION FEE</label>
+                <input class="form-control" type="text" id="fees" name="school[fees]"
+                    value="<%=school.fees %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            
+
+            <div class="mb-3">
+                <label class="form-label" for="location">LOCATION</label>
+                <input class="form-control" type="text" id="location" name="school[location]"
+                    value="<%=school.location %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="website">WEBSITE</label>
+                <input class="form-control" type="text" id="website" name="school[website]"
+                    value="<%=school.website %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="about">ABOUT SCHOOL</label>
+                <textarea class="form-control" type="text" id="about" name="school[about]"
+                    required><%= school.about%></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">DESCRIPTION</label>
+                <textarea class="form-control" type="text" id="description" name="school[description]"
+                    required><%= school.description%></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Add more image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <% school.images.forEach(function(img, i) {  %>
+                <img src="<%=img.thumbnail %>" class="img-thumbnail" alt="">
+                <div class="form-check-inline">
+                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                </div>
+                <label for="image-<%=i%>">Delete?</label>
+                <% })%>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info">UPDATE SCHOOL</button>
+            </div>
+        </form>
+        
+    </div>
+</div>

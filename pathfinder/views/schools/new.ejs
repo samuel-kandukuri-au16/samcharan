@@ -1,0 +1,108 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">ADD SCHOOL</h1>
+    <div class="col-6 offset-3">
+        <form action="/schools" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="schoolName">SCHOOL NAME</label>
+                <input class="form-control" type="text" id="schoolName" name="school[schoolName]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="year">YEAR OF ESTABLISHMENT</label>
+                <div class="input-group">
+                    
+                    <input type="text" class="form-control" id="year" placeholder="1900" aria-label="year"
+                        aria-describedby="fees-label" name="school[year]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="principle">PRINCIPLE</label>
+                <input class="form-control" type="text" id="principle" name="school[principle]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="curriculum">CURRICULUM FOLLOWED</label>
+                <input class="form-control" type="text" id="curriculum" name="school[curriculum]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="admission">ADMISSION PERIOD</label>
+                <input class="form-control" type="text" id="admission" name="school[admission]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="fees">REGISTRATION FEE</label>
+                <input class="form-control" type="text" id="fees" name="school[fees]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label" for="location">LOCATION</label>
+                <input class="form-control" type="text" id="location" name="school[location]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="website">WEBSITE</label>
+                <input class="form-control" type="text" id="website" name="school[website]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="school[image]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div> -->
+            
+            <div class="mb-3">
+                <label class="form-label" for="about">ABOUT SCHOOL</label>
+                <textarea class="form-control" type="text" id="about" name="school[about]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">DESCRIPTION</label>
+                <textarea class="form-control" type="text" id="description" name="school[description]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Add School</button>
+            </div>
+        </form>
+       
+    </div>
+</div>

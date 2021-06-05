@@ -1,0 +1,47 @@
+  
+body {
+    height: 100vh;
+    background-image:
+    url("https://res.cloudinary.com/spiky/image/upload/v1615883930/images/restone_efv8bv.jpg");
+    background-size: cover;
+    background-position: center;
+    color: rgb(211, 9, 9);
+}
+
+li {
+    color: rgb(4, 79, 133);
+}
+
+h5{
+    color: rgb(218, 26, 26);
+}
+h1 {font-family: 'Times New Roman', Times, serif;
+    color:#254b79;
+}
+b {
+    color: coral;
+}
+
+.bg {
+    background-color:#12384e;
+}
+
+.bgi{
+    color: aliceblue;
+}
+
+.bgs{
+    color: #fbfffef8;
+}
+
+.bgsrev {
+    color: white;
+    background-color: #12384e;
+}
+
+.bgsd {
+    background-color: #12384e;
+}
+.bgsl {
+    background-color: darkcyan;
+}
